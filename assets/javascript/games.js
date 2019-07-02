@@ -10,7 +10,7 @@ $(document).ready(function() {
   var crystal4Val;
 
 function newGame(){
-  secretNumber = Math.round(Math.random()*120)+20;
+  secretNumber = Math.round(Math.random()*101)+20;
   totalScore = 0;
   crystal1Val = Math.round(Math.random()*12)+1;
   crystal2Val = Math.round(Math.random()*12)+1;
