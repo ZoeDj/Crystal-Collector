@@ -5,31 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CrystalCollector</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/games.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h1>Crystal Collector</h1>
-
-  <h3>Number to match: <span class="secret-number"></span></h3>
-
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">CRYSTALS COLLECTOR</h1>
+                <p class="lead">Try to collect the right amount of the different crystals to match the given number and win the game.</p>
+                    <p>When you click on a crystal, it will add a specific amount of points to your total score. </p>
+                     You will lose if your score goes above the given number.
+                     Good luck!</p>
+                     <hr>
+                     <br>
+                     <div class="row">
+                            <div class="col-sm"><h4>NUMBER TO MATCH: <span class="secret-number"></span></h4></div>
+                            <div class="col-sm"><div class="win-or-lose"></div></div>
+                            <div class="col-sm"><h4>TOTAL SCORE: <span class="total-score"></span></h4></div>
+                     </div>
+            </div>
+        </div>
   <div id="crystals">
-    <img class="crystal-image" src="assets/images/crystal-1.png" alt="multicolor crystal">
-    <img class="crystal-image" src="assets/images/crystal-2.png" alt="pink crystal">
-    <img class="crystal-image" src="assets/images/crystal-3.png" alt="blue crystal">
-    <img class="crystal-image" src="assets/images/crystal-4.png" alt="purple crystal">
+    <img class="crystal-image img-fluid" id="crystal-1" src="assets/images/crystal-1.png" alt="multicolor crystal">
+    <img class="crystal-image img-fluid" id="crystal-2" src="assets/images/crystal-2.png" alt="pink crystal">
+    <img class="crystal-image img-fluid" id="crystal-3" src="assets/images/crystal-3.png" alt="blue crystal">
+    <img class="crystal-image img-fluid" id="crystal-4" src="assets/images/crystal-4.png" alt="purple crystal">
   </div>
-
-  <div class="display-sum"></div>
-  <div class="disply-score"></div>
-  <button>Play Again</button>
-  <div class="display-wins"></div>
-  <div class="disply-losses"></div>
-
-    
+    <br>
+  <button type="button" class="btn btn-primary">Play Again</button>
+  <div class="row">
+        <div class="col-sm"><h3>WINS: <span class="wins"></span></h3></div>
+        <div class="col-sm"><h3>LOSSES: <span class="losses"></span></h3></div>
+    </div> 
+</div>
 </body>
 </html>

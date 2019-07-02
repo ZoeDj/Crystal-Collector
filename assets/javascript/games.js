@@ -38,10 +38,10 @@ $(document).ready(function() {
         $(".crystal-image").on("click", function() {
 		// if (totalScore >= secretNumber) {
 		// }
-		var crystalValue = $(this).attr("data-crystalvalue");
-		crystalValue = parseInt(crystalValue);
-		totalScore += crystalValue;
-		$(".total-score").text(totalScore);
+      var crystalValue = $(this).attr("data-crystalvalue");
+      crystalValue = parseInt(crystalValue);
+      totalScore += crystalValue;
+      $(".total-score").text(totalScore);
     
     if (totalScore === secretNumber) {
         wins++;
