@@ -3,15 +3,24 @@ $(document).ready(function() {
     var totalScore = 0;
     var wins = 0;
     var losses = 0;
-    
-        var secretNumber = Math.round(Math.random()*12)+20;
+    var secretNumber
+    var crystal1Val 
+    var crystal2Val 
+    var crystal3Val 
+    var crystal4Val 
+
+
+    function newGame(){
+         secretNumber = Math.round(Math.random()*12)+20;
+         totalScore = 0;
         // totalScore += increment;
         // var increment = Math.round(Math.random()*12)+1;
         // each crystal has it's own value and it's diferent every time:
-        var crystal1Val = Math.round(Math.random()*12)+1;
-        var crystal2Val = Math.round(Math.random()*12)+1;
-        var crystal3Val = Math.round(Math.random()*12)+1;
-        var crystal4Val = Math.round(Math.random()*12)+1;
+        
+        crystal1Val = Math.round(Math.random()*12)+1;
+        crystal2Val = Math.round(Math.random()*12)+1;
+        crystal3Val = Math.round(Math.random()*12)+1;
+        crystal4Val = Math.round(Math.random()*12)+1;
    
         $(".secret-number").text(secretNumber);
         $(".total-score").text(totalScore);
@@ -20,14 +29,14 @@ $(document).ready(function() {
         $("#crystal-3").attr("data-crystalvalue", crystal3Val);
         $("#crystal-4").attr("data-crystalvalue", crystal4Val);
         $(".wins").text(wins);
-	    $(".losses").text(losses);
+	      $(".losses").text(losses);
         $(".win-or-lose").text("");
    
-
+        }
+        newGame();
     // Function to add the crystal values together
         $(".crystal-image").on("click", function() {
 		// if (totalScore >= secretNumber) {
-			
 		// }
 		var crystalValue = $(this).attr("data-crystalvalue");
 		crystalValue = parseInt(crystalValue);
@@ -38,15 +47,15 @@ $(document).ready(function() {
         wins++;
        $(".win-or-lose").text("You win!");
        $(".wins").text(wins);
+       newGame();
       }
       else if (totalScore > secretNumber){
         losses++;
-        $(".win-or-lose").text("You lose, try again");
+        $(".win-or-lose").text("You lost, try again");
         $(".losses").text(losses);
+        newGame();
       }
     
-
-   
 
     // $(".btn").on("click", function() {
 		
