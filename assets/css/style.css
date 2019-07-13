@@ -36,3 +36,11 @@ body{
     to {opacity: 1;}
 }
 
+.link{
+    color: pink;
+    font-size: 12px;
+}
+.link:hover {
+color: #937bc5;
+}
+
